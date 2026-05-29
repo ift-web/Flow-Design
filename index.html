@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Flow Design — Fast, reliable design subscription for growing brands. Social media, marketing visuals, banners, menus, and event graphics on demand." />
+  <meta name="keywords" content="design subscription, social media design, marketing visuals, banner design, Taiwan design studio" />
+  <title>Flow Design — Design in Flow. Grow in Flow.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════ NAV ═══════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-mark">F</span>
+        <span>Flow Design</span>
+      </a>
+      <nav class="nav__links" role="navigation" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#works">Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="nav__cta">Start a Project</a>
+      </nav>
+      <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="navMobile">
+      <a href="#services" class="nav__mobile-link">Services</a>
+      <a href="#works" class="nav__mobile-link">Works</a>
+      <a href="#pricing" class="nav__mobile-link">Pricing</a>
+      <a href="#faq" class="nav__mobile-link">FAQ</a>
+      <a href="#contact" class="nav__mobile-link nav__mobile-cta">Start a Project</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+    <section class="hero" id="home">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__noise" aria-hidden="true"></div>
+
+      <div class="hero__inner container">
+        <div class="hero__badge reveal">
+          <span class="hero__badge-dot"></span>
+          Available for new projects
+        </div>
+
+        <h1 class="hero__headline reveal reveal--delay-1">
+          Design in Flow.<br />
+          <span class="hero__headline-accent">Grow in Flow.</span>
+        </h1>
+
+        <p class="hero__sub reveal reveal--delay-2">
+          Fast, reliable design support for growing brands —<br class="hero__br" />
+          delivered as a seamless monthly subscription.
+        </p>
+
+        <div class="hero__actions reveal reveal--delay-3">
+          <a href="#contact" class="btn btn--primary">Start a Project</a>
+          <a href="#pricing" class="btn btn--ghost">View Pricing</a>
+        </div>
+
+        <div class="hero__trust reveal reveal--delay-4">
+          <span class="hero__trust-label">Trusted by brands in</span>
+          <div class="hero__trust-industries">
+            <span>F&B</span>
+            <span class="hero__trust-sep">·</span>
+            <span>Beauty</span>
+            <span class="hero__trust-sep">·</span>
+            <span>E-commerce</span>
+            <span class="hero__trust-sep">·</span>
+            <span>Travel</span>
+            <span class="hero__trust-sep">·</span>
+            <span>Startups</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ MARQUEE ═══════════════════════════════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Social Media Design</span><span class="marquee__dot">✦</span>
+        <span>Marketing Visuals</span><span class="marquee__dot">✦</span>
+        <span>Banner Design</span><span class="marquee__dot">✦</span>
+        <span>Menu Design</span><span class="marquee__dot">✦</span>
+        <span>Event Graphics</span><span class="marquee__dot">✦</span>
+        <span>Brand Identity</span><span class="marquee__dot">✦</span>
+        <span>Social Media Design</span><span class="marquee__dot">✦</span>
+        <span>Marketing Visuals</span><span class="marquee__dot">✦</span>
+        <span>Banner Design</span><span class="marquee__dot">✦</span>
+        <span>Menu Design</span><span class="marquee__dot">✦</span>
+        <span>Event Graphics</span><span class="marquee__dot">✦</span>
+        <span>Brand Identity</span><span class="marquee__dot">✦</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ SERVICES ═══════════════════════════════════ -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">What We Do</p>
+          <h2 class="section-title">Design, on demand.</h2>
+          <p class="section-desc">Every deliverable you need — from daily social posts to complete campaign visuals — handled by a dedicated creative team.</p>
+        </div>
+
+        <div class="services__grid">
+
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="9" height="9" rx="1.5"/><rect x="13" y="3" width="9" height="9" rx="1.5"/><rect x="2" y="14" width="9" height="7" rx="1.5"/><rect x="13" y="14" width="9" height="7" rx="1.5"/></svg>
+            </div>
+            <h3 class="service-card__title">Social Media Design</h3>
+            <p class="service-card__desc">Feed posts, Stories, Reels covers, and carousels engineered to stop the scroll — styled consistently to your brand.</p>
+            <div class="service-card__tag">Instagram · Facebook · LinkedIn</div>
+          </article>
+
+          <article class="service-card reveal reveal--delay-1">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="service-card__title">Marketing Visuals</h3>
+            <p class="service-card__desc">Campaign graphics, promotional materials, and ad creatives that convert — built to perform across every platform.</p>
+            <div class="service-card__tag">Ads · Campaigns · Promotions</div>
+          </article>
+
+          <article class="service-card reveal reveal--delay-2">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>
+            </div>
+            <h3 class="service-card__title">Banner Design</h3>
+            <p class="service-card__desc">Web banners, digital signage, and display ads in every standard size — fast output, zero resizing headaches.</p>
+            <div class="service-card__tag">Digital · Print · Outdoor</div>
+          </article>
+
+          <article class="service-card reveal reveal--delay-3">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h16M4 14h10M4 18h8"/><rect x="1" y="2" width="22" height="20" rx="2"/></svg>
+            </div>
+            <h3 class="service-card__title">Menu Design</h3>
+            <p class="service-card__desc">Elevated menus for restaurants, cafés, and beverage brands — print-ready, scannable, and unmistakably on-brand.</p>
+            <div class="service-card__tag">Restaurant · Café · Bar</div>
+          </article>
+
+          <article class="service-card reveal reveal--delay-4">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l4-4 4 4"/><path d="M12 2v10.3"/><circle cx="12" cy="17" r="5"/><path d="M9.5 17l1.5 1.5L15 15"/></svg>
+            </div>
+            <h3 class="service-card__title">Event Graphics</h3>
+            <p class="service-card__desc">Launch parties, pop-ups, seasonal campaigns — cohesive event visuals from invitations to post-event content kits.</p>
+            <div class="service-card__tag">Launch · Seasonal · Pop-up</div>
+          </article>
+
+          <article class="service-card reveal reveal--delay-5">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="service-card__title">Design Subscription</h3>
+            <p class="service-card__desc">One flat monthly fee. Unlimited requests. Your own dedicated design partner — no contracts, no surprises.</p>
+            <div class="service-card__tag">Monthly · Scalable · Predictable</div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ WORKS ═══════════════════════════════════ -->
+    <section class="works section" id="works">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Featured Work</p>
+          <h2 class="section-title">Brands we've moved.</h2>
+          <p class="section-desc">A curated selection of recent projects across industries — each one built from scratch for the brand it represents.</p>
+        </div>
+
+        <div class="works__filter reveal">
+          <button class="works__filter-btn active" data-filter="all">All</button>
+          <button class="works__filter-btn" data-filter="restaurant">Restaurant</button>
+          <button class="works__filter-btn" data-filter="beauty">Spa & Beauty</button>
+          <button class="works__filter-btn" data-filter="travel">Travel</button>
+          <button class="works__filter-btn" data-filter="ecommerce">E-commerce</button>
+          <button class="works__filter-btn" data-filter="brand">Brand</button>
+        </div>
+
+        <div class="works__grid">
+
+          <article class="work-card work-card--tall reveal" data-category="restaurant">
+            <div class="work-card__visual work-card__visual--1">
+              <div class="work-card__inner-art">
+                <div class="art-restaurant">
+                  <div class="art-plate"></div>
+                  <div class="art-fork"></div>
+                  <div class="art-knife"></div>
+                  <div class="art-circle art-circle--1"></div>
+                  <div class="art-circle art-circle--2"></div>
+                  <div class="art-label">OMAKASE</div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card__info">
+              <span class="work-card__cat">Restaurant</span>
+              <h3 class="work-card__title">Omakase Studio — Brand Identity & Menu</h3>
+              <p class="work-card__meta">Menu Design · Social Campaign</p>
+            </div>
+          </article>
+
+          <article class="work-card reveal reveal--delay-1" data-category="beauty">
+            <div class="work-card__visual work-card__visual--2">
+              <div class="work-card__inner-art">
+                <div class="art-beauty">
+                  <div class="art-bottle art-bottle--1"></div>
+                  <div class="art-bottle art-bottle--2"></div>
+                  <div class="art-glow"></div>
+                  <div class="art-label art-label--light">SÉRUM</div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card__info">
+              <span class="work-card__cat">Spa & Beauty</span>
+              <h3 class="work-card__title">Lumière — Skincare Launch Campaign</h3>
+              <p class="work-card__meta">Social Media · Marketing Visuals</p>
+            </div>
+          </article>
+
+          <article class="work-card reveal reveal--delay-2" data-category="travel">
+            <div class="work-card__visual work-card__visual--3">
+              <div class="work-card__inner-art">
+                <div class="art-travel">
+                  <div class="art-horizon"></div>
+                  <div class="art-sun"></div>
+                  <div class="art-mountains"></div>
+                  <div class="art-label art-label--travel">JOURNEY</div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card__info">
+              <span class="work-card__cat">Travel</span>
+              <h3 class="work-card__title">Wandr — Adventure Brand Visuals</h3>
+              <p class="work-card__meta">Banner Design · Event Graphics</p>
+            </div>
+          </article>
+
+          <article class="work-card work-card--wide reveal reveal--delay-3" data-category="ecommerce">
+            <div class="work-card__visual work-card__visual--4">
+              <div class="work-card__inner-art">
+                <div class="art-ecom">
+                  <div class="art-product art-product--1"></div>
+                  <div class="art-product art-product--2"></div>
+                  <div class="art-product art-product--3"></div>
+                  <div class="art-badge">SALE</div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card__info">
+              <span class="work-card__cat">E-commerce</span>
+              <h3 class="work-card__title">HAVN — Home Living Product Launches</h3>
+              <p class="work-card__meta">Marketing Visuals · Social Content</p>
+            </div>
+          </article>
+
+          <article class="work-card reveal reveal--delay-4" data-category="brand">
+            <div class="work-card__visual work-card__visual--5">
+              <div class="work-card__inner-art">
+                <div class="art-brand">
+                  <div class="art-logo-mark"></div>
+                  <div class="art-type-row"></div>
+                  <div class="art-color-row">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card__info">
+              <span class="work-card__cat">Brand Campaign</span>
+              <h3 class="work-card__title">Kova Studio — Full Campaign Rollout</h3>
+              <p class="work-card__meta">Brand Identity · Event Graphics</p>
+            </div>
+          </article>
+
+          <article class="work-card work-card--tall reveal reveal--delay-5" data-category="restaurant">
+            <div class="work-card__visual work-card__visual--6">
+              <div class="work-card__inner-art">
+                <div class="art-cafe">
+                  <div class="art-cup"></div>
+                  <div class="art-steam art-steam--1"></div>
+                  <div class="art-steam art-steam--2"></div>
+                  <div class="art-label art-label--dark">ESPRESSO</div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card__info">
+              <span class="work-card__cat">Restaurant</span>
+              <h3 class="work-card__title">Kairo Coffee — Menu & Seasonal Posters</h3>
+              <p class="work-card__meta">Menu Design · Marketing Visuals</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ HOW IT WORKS ═══════════════════════════════════ -->
+    <section class="process section" id="process">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">The Process</p>
+          <h2 class="section-title">Simple by design.</h2>
+          <p class="section-desc">From brief to final file in days — not weeks. Our process is built for speed without sacrificing quality.</p>
+        </div>
+
+        <div class="process__track">
+          <div class="process__line" aria-hidden="true"></div>
+
+          <div class="process__step reveal">
+            <div class="process__step-num">01</div>
+            <div class="process__step-body">
+              <h3 class="process__step-title">Submit Request</h3>
+              <p class="process__step-desc">Tell us what you need via our simple project board. No long briefs — just your idea, reference, and deadline. We handle the rest.</p>
+              <div class="process__step-pill">Trello-based Board · Async</div>
+            </div>
+          </div>
+
+          <div class="process__step reveal reveal--delay-1">
+            <div class="process__step-num">02</div>
+            <div class="process__step-body">
+              <h3 class="process__step-title">Design In Progress</h3>
+              <p class="process__step-desc">Our team gets to work immediately. Most designs are delivered within 48 hours — complex projects within 4 business days.</p>
+              <div class="process__step-pill">48h Average Turnaround</div>
+            </div>
+          </div>
+
+          <div class="process__step reveal reveal--delay-2">
+            <div class="process__step-num">03</div>
+            <div class="process__step-body">
+              <h3 class="process__step-title">Review & Revise</h3>
+              <p class="process__step-desc">Review the design in context. Request edits with clear comments. We revise until you're satisfied — no revision limits on active plans.</p>
+              <div class="process__step-pill">Unlimited Revisions</div>
+            </div>
+          </div>
+
+          <div class="process__step reveal reveal--delay-3">
+            <div class="process__step-num">04</div>
+            <div class="process__step-body">
+              <h3 class="process__step-title">Receive Final Files</h3>
+              <p class="process__step-desc">Download your print-ready or digital-ready files — organized, labeled, and formatted exactly as you need them.</p>
+              <div class="process__step-pill">Figma · PDF · PNG · SVG</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ PRICING ═══════════════════════════════════ -->
+    <section class="pricing section" id="pricing">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Subscription Plans</p>
+          <h2 class="section-title">One price. No surprises.</h2>
+          <p class="section-desc">Pause or cancel anytime. Every plan includes unlimited revisions and dedicated creative support.</p>
+        </div>
+
+        <div class="pricing__grid">
+
+          <article class="pricing-card reveal">
+            <div class="pricing-card__header">
+              <p class="pricing-card__tier">Starter</p>
+              <div class="pricing-card__price">
+                <span class="pricing-card__currency">NT$</span>
+                <span class="pricing-card__amount">8,880</span>
+                <span class="pricing-card__period">/mo</span>
+              </div>
+              <p class="pricing-card__tagline">For brands starting to scale.</p>
+            </div>
+            <ul class="pricing-card__features">
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> 8 designs per month</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> Email support</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> 1 active request at a time</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> Unlimited revisions</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> Pause anytime</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline">Get Started</a>
+          </article>
+
+          <article class="pricing-card pricing-card--featured reveal reveal--delay-1">
+            <div class="pricing-card__badge">Most Popular</div>
+            <div class="pricing-card__header">
+              <p class="pricing-card__tier">Growth</p>
+              <div class="pricing-card__price">
+                <span class="pricing-card__currency">NT$</span>
+                <span class="pricing-card__amount">16,800</span>
+                <span class="pricing-card__period">/mo</span>
+              </div>
+              <p class="pricing-card__tagline">For brands with consistent volume.</p>
+            </div>
+            <ul class="pricing-card__features">
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> 20 designs per month</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> Priority support</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> 2 active requests at once</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> Unlimited revisions</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> 48h turnaround</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> Pause anytime</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary">Get Started</a>
+          </article>
+
+          <article class="pricing-card reveal reveal--delay-2">
+            <div class="pricing-card__header">
+              <p class="pricing-card__tier">Pro</p>
+              <div class="pricing-card__price">
+                <span class="pricing-card__currency">NT$</span>
+                <span class="pricing-card__amount">29,800</span>
+                <span class="pricing-card__period">/mo</span>
+              </div>
+              <p class="pricing-card__tagline">For brands that never slow down.</p>
+            </div>
+            <ul class="pricing-card__features">
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> Unlimited requests</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> Priority queue — first in line</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> Fast 24h turnaround</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> Dedicated Slack channel</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> Monthly strategy calls</li>
+              <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,8 6,12 14,4"/></svg> Pause anytime</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline">Get Started</a>
+          </article>
+
+        </div>
+
+        <div class="pricing__note reveal">
+          <p>Not sure which plan fits? <a href="#contact">Send us a message</a> — we'll help you figure it out.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ FAQ ═══════════════════════════════════ -->
+    <section class="faq section" id="faq">
+      <div class="container">
+        <div class="faq__layout">
+
+          <div class="faq__left reveal">
+            <p class="section-label">FAQ</p>
+            <h2 class="section-title faq__title">Everything<br />you need<br />to know.</h2>
+            <p class="faq__sub">Still have questions? <a href="#contact">Drop us a line.</a></p>
+          </div>
+
+          <div class="faq__right">
+
+            <div class="faq-item reveal">
+              <button class="faq-item__q" aria-expanded="false">
+                What exactly is a design subscription?
+                <svg class="faq-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+              </button>
+              <div class="faq-item__a">
+                <p>A design subscription gives you access to a dedicated design team for a flat monthly fee. Instead of hiring a full-time designer or chasing freelancers, you submit design requests on an ongoing basis and we deliver them — fast, consistently, and without the overhead.</p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal reveal--delay-1">
+              <button class="faq-item__q" aria-expanded="false">
+                How fast will I get my designs?
+                <svg class="faq-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+              </button>
+              <div class="faq-item__a">
+                <p>Most standard designs — social posts, banners, promotional graphics — are delivered within 48 business hours. Larger or more complex projects may take 3–5 business days. Pro plan subscribers receive 24h priority turnaround.</p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal reveal--delay-2">
+              <button class="faq-item__q" aria-expanded="false">
+                What if I don't like the design?
+                <svg class="faq-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+              </button>
+              <div class="faq-item__a">
+                <p>All plans include unlimited revisions. If the first draft isn't right, just leave specific feedback and we'll revise until you're completely happy. We're not done until you are.</p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal reveal--delay-3">
+              <button class="faq-item__q" aria-expanded="false">
+                Can I pause or cancel my subscription?
+                <svg class="faq-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+              </button>
+              <div class="faq-item__a">
+                <p>Yes. You can pause your subscription at any time — your remaining days carry over to when you unpause. You can also cancel before your next billing cycle with no penalty, no awkward conversations.</p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal reveal--delay-4">
+              <button class="faq-item__q" aria-expanded="false">
+                What tools do you design in?
+                <svg class="faq-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+              </button>
+              <div class="faq-item__a">
+                <p>We primarily work in Figma, which means all source files are shareable and editable for your team. Final deliverables are provided in your preferred formats — PNG, PDF, SVG, or export-ready Figma frames.</p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal reveal--delay-5">
+              <button class="faq-item__q" aria-expanded="false">
+                What kinds of brands do you typically work with?
+                <svg class="faq-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg>
+              </button>
+              <div class="faq-item__a">
+                <p>We work with small businesses, restaurants, beauty and spa brands, travel companies, e-commerce stores, and startups. If you're building a brand and need consistent, high-quality design output — we're built for you.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ CONTACT ═══════════════════════════════════ -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="contact__layout">
+
+          <div class="contact__left reveal">
+            <p class="section-label">Get In Touch</p>
+            <h2 class="contact__title">Let's build something<br /><span class="contact__title-accent">worth noticing.</span></h2>
+            <p class="contact__sub">Tell us about your brand and what you need. We'll get back to you within one business day.</p>
+
+            <div class="contact__details">
+              <div class="contact__detail">
+                <span class="contact__detail-label">Response time</span>
+                <span class="contact__detail-val">Within 24 hours</span>
+              </div>
+              <div class="contact__detail">
+                <span class="contact__detail-label">Working hours</span>
+                <span class="contact__detail-val">Mon – Fri, 9am – 6pm</span>
+              </div>
+              <div class="contact__detail">
+                <span class="contact__detail-label">Timezone</span>
+                <span class="contact__detail-val">GMT+8, Taiwan</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__right reveal reveal--delay-1">
+            <div class="contact__form-wrap">
+              <div class="contact__form" id="contactForm">
+
+                <div class="form-row form-row--half">
+                  <div class="form-group">
+                    <label for="fname" class="form-label">Your Name</label>
+                    <input type="text" id="fname" name="name" class="form-input" placeholder="Alex Chen" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="fcompany" class="form-label">Company / Brand</label>
+                    <input type="text" id="fcompany" name="company" class="form-input" placeholder="Your Brand Co." />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="femail" class="form-label">Email Address</label>
+                  <input type="email" id="femail" name="email" class="form-input" placeholder="you@brand.com" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="ftype" class="form-label">Project Type</label>
+                  <select id="ftype" name="project_type" class="form-select">
+                    <option value="" disabled selected>Select a service</option>
+                    <option>Social Media Design</option>
+                    <option>Marketing Visuals</option>
+                    <option>Banner Design</option>
+                    <option>Menu Design</option>
+                    <option>Event Graphics</option>
+                    <option>Design Subscription</option>
+                    <option>Other / Not Sure Yet</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="fmessage" class="form-label">Tell us about your project</label>
+                  <textarea id="fmessage" name="message" class="form-textarea" placeholder="Share any details — brand references, timeline, budget, or just a rough idea. We'll take it from here." rows="5" required></textarea>
+                </div>
+
+                <button type="button" class="btn btn--primary btn--full" id="formSubmit">
+                  Send Inquiry
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </button>
+
+                <div class="form-success" id="formSuccess" aria-live="polite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="8,12 11,15 16,9"/></svg>
+                  <p>Message received. We'll be in touch within 24 hours.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">
+            <span class="nav__logo-mark">F</span>
+            <span>Flow Design</span>
+          </a>
+          <p class="footer__tagline">Design in Flow, Grow in Flow.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-col">
+            <span class="footer__nav-head">Studio</span>
+            <a href="#services">Services</a>
+            <a href="#works">Works</a>
+            <a href="#process">Process</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-head">Plans</span>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 Flow Design. All rights reserved.</p>
+        <p class="footer__made">Crafted with intention.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
