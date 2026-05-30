@@ -1,144 +1,15 @@
-// FLOW DESIGN — 台灣版互動功能
-
 "use strict";
-
-const header = document.getElementById("siteHeader");
-const navToggle = document.getElementById("navToggle");
-const navMenu = document.getElementById("navMenu");
-
-window.addEventListener("scroll", () => {
-  header.classList.toggle("scrolled", window.scrollY > 20);
-}, { passive: true });
-
-if (navToggle && navMenu) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = navMenu.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  navMenu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-}
-
-// 作品篩選
-const filterButtons = document.querySelectorAll(".filter-btn");
-const workCards = document.querySelectorAll(".work-card");
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    filterButtons.forEach((btn) => btn.classList.remove("active"));
-    button.classList.add("active");
-
-    const filter = button.dataset.filter;
-
-    workCards.forEach((card) => {
-      const category = card.dataset.category;
-      const shouldShow = filter === "all" || category === filter;
-      card.classList.toggle("hidden", !shouldShow);
-    });
-  });
-});
-
-// FAQ Accordion
-const faqButtons = document.querySelectorAll(".faq-question");
-
-faqButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const item = button.closest(".faq-item");
-    const answer = item.querySelector(".faq-answer");
-    const isOpen = button.getAttribute("aria-expanded") === "true";
-
-    document.querySelectorAll(".faq-question").forEach((btn) => {
-      btn.setAttribute("aria-expanded", "false");
-      const ans = btn.closest(".faq-item").querySelector(".faq-answer");
-      ans.style.maxHeight = null;
-    });
-
-    if (!isOpen) {
-      button.setAttribute("aria-expanded", "true");
-      answer.style.maxHeight = answer.scrollHeight + "px";
-    }
-  });
-});
-
-// Scroll Reveal
-const revealElements = document.querySelectorAll(".reveal");
-
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.12,
-  rootMargin: "0px 0px -40px 0px"
-});
-
-revealElements.forEach((element) => revealObserver.observe(element));
-
-// Formspree 表單
-const contactForm = document.getElementById("contactForm");
-
-if (contactForm) {
-  contactForm.addEventListener("submit", submitForm);
-}
-
-function submitForm(event) {
-  event.preventDefault();
-
-  const n = document.getElementById("fname");
-  const em = document.getElementById("femail");
-  const msg = document.getElementById("fmessage");
-
-  let ok = true;
-
-  [n, em, msg].forEach((field) => {
-    if (!field.value.trim()) {
-      field.classList.add("form-error");
-      setTimeout(() => field.classList.remove("form-error"), 2000);
-      ok = false;
-    }
-  });
-
-  if (!ok) return;
-
-  const btn = document.querySelector(".form-submit");
-  const btnText = btn.querySelector("span");
-
-  btn.disabled = true;
-  btnText.textContent = "傳送中…";
-
-  fetch("https://formspree.io/f/xvzdegqv", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json"
-    },
-    body: JSON.stringify({
-      name: n.value,
-      email: em.value,
-      service: document.getElementById("fservice").value,
-      budget: document.getElementById("fbudget").value,
-      message: msg.value
-    })
-  })
-    .then((response) => {
-      if (response.ok) {
-        document.getElementById("formWrap").style.display = "none";
-        document.getElementById("formSuccess").style.display = "block";
-      } else {
-        btn.disabled = false;
-        btnText.textContent = "送出失敗，請重試";
-      }
-    })
-    .catch(() => {
-      btn.disabled = false;
-      btnText.textContent = "網路錯誤，請重試";
-    });
-}
+const header=document.getElementById("siteHeader");
+const navToggle=document.getElementById("navToggle");
+const navMenu=document.getElementById("navMenu");
+window.addEventListener("scroll",()=>{header.classList.toggle("scrolled",window.scrollY>20)},{passive:true});
+if(navToggle&&navMenu){navToggle.addEventListener("click",()=>{const isOpen=navMenu.classList.toggle("open");navToggle.setAttribute("aria-expanded",String(isOpen))});navMenu.querySelectorAll("a").forEach(link=>{link.addEventListener("click",()=>{navMenu.classList.remove("open");navToggle.setAttribute("aria-expanded","false")})})}
+const filterButtons=document.querySelectorAll(".filter-btn");
+const workCards=document.querySelectorAll(".work-card");
+filterButtons.forEach(button=>{button.addEventListener("click",()=>{filterButtons.forEach(btn=>btn.classList.remove("active"));button.classList.add("active");const filter=button.dataset.filter;workCards.forEach(card=>{const category=card.dataset.category;card.classList.toggle("hidden",!(filter==="all"||category===filter))})})});
+document.querySelectorAll(".faq-question").forEach(button=>{button.addEventListener("click",()=>{const item=button.closest(".faq-item");const answer=item.querySelector(".faq-answer");const isOpen=button.getAttribute("aria-expanded")==="true";document.querySelectorAll(".faq-question").forEach(btn=>{btn.setAttribute("aria-expanded","false");btn.closest(".faq-item").querySelector(".faq-answer").style.maxHeight=null});if(!isOpen){button.setAttribute("aria-expanded","true");answer.style.maxHeight=answer.scrollHeight+"px"}})});
+const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");revealObserver.unobserve(entry.target)}})},{threshold:.12,rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+const contactForm=document.getElementById("contactForm");
+if(contactForm){contactForm.addEventListener("submit",submitForm)}
+function submitForm(event){event.preventDefault();const n=document.getElementById("fname");const em=document.getElementById("femail");const msg=document.getElementById("fmessage");let ok=true;[n,em,msg].forEach(field=>{if(!field.value.trim()){field.classList.add("form-error");setTimeout(()=>field.classList.remove("form-error"),2000);ok=false}});if(!ok)return;const btn=document.querySelector(".form-submit");const btnText=btn.querySelector("span");btn.disabled=true;btnText.textContent="傳送中…";fetch("https://formspree.io/f/xvzdegqv",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({name:n.value,email:em.value,service:document.getElementById("fservice").value,budget:document.getElementById("fbudget").value,message:msg.value})}).then(response=>{if(response.ok){document.getElementById("formWrap").style.display="none";document.getElementById("formSuccess").style.display="block"}else{btn.disabled=false;btnText.textContent="送出失敗，請重試"}}).catch(()=>{btn.disabled=false;btnText.textContent="網路錯誤，請重試"})}
